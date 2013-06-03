@@ -2,18 +2,21 @@
 #include <unistd.h>
 #include <fcntl.h>
 #define BUFLEN 1024
-dummy_function (void)  
+dummy_function (char *ptr)  
 {  
-    unsigned char *ptr = 0x00;  
-    *ptr = 0x00;  
+//    unsigned char *ptr = 0x00;  
+    ptr = 0x00;  
 }  
 
 int main (void)  
 {  
     char buffer[BUFLEN] = {0};
+    //add-s
+    unsigned char *ptr = 0x00;  
+    //add-e
+    dummy_function (ptr);  
 
     int fd = open("testfile", O_RDWR);
-    dummy_function ();  
     printf("fd [%d]\n", fd);
     ssize_t readnum = read(fd, buffer, BUFLEN);
     printf("readnum [%ld]\n", readnum);
