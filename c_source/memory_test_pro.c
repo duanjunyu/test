@@ -2,6 +2,10 @@
 #include <stdlib.h>  
 #include <signal.h>  
 #include <string.h>  
+/*
+ * please run memory_test_pro like this:
+ * $ sudo ./memory_test_pro
+ */
 
 void dump(int signo)  
 {  
