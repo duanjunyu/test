@@ -98,10 +98,16 @@ FruitShop* create_fruit_shop(int color)
 int main()
 {
     FruitShop *newfruitshop;
+    Apple *newApple;
     Grape *newGrape;
+
     newfruitshop = create_fruit_shop(WHITE);
+
     newGrape = (*(newfruitshop->sell_grape))();
+    newApple = (*(newfruitshop->sell_apple))();
+
     (*(newGrape->print_grape))();
+    (*(newApple->print_apple))();
 
     
     return 0;
