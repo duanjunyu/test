@@ -27,7 +27,8 @@ int main(void)
         printf("Data is available now.\n");
         /* FD_ISSET(0, &rfds) will be true. */
     else
-        printf("No data within five seconds.\n");
+//        printf("No data within five seconds.\n");
+        printf("No data within five hundred seconds.\n");
 
     exit(EXIT_SUCCESS);
 
