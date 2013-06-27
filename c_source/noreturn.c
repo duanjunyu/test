@@ -1,12 +1,13 @@
 #include <stdio.h>
-int foo(int x, int y);
+int foo(int y, int x);
 int main()
 {
     int i = 7;
-    int ret = foo(i, 0);
+    int j = 8;
+    int ret = foo(j, i);
     printf("ret = %d\n", ret);
 }
-int foo(int x, int y)
+int foo(int y, int x)
 {
 #if 0
     if(x == 2)
