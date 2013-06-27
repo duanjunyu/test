@@ -15,3 +15,4 @@ pow
 socket_test
 test_pointer
 select
+noreturn
