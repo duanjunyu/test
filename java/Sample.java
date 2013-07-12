@@ -8,7 +8,9 @@ public class Sample {
             iList.add(i);
 
         int addValue = 1000;
-        for (Integer i: iList) {
+//        for(Iterator<Integer> it = iList.iterator(); it.hasNext(); ){
+        for(ListIterator<Integer> it = iList.listIterator(); it.hasNext(); ){
+            Integer i = it.next();
             if (i%10 == 0) {
                 iList.add(addValue++);
             }
