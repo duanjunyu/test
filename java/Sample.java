@@ -12,7 +12,7 @@ public class Sample {
         for(ListIterator<Integer> it = iList.listIterator(); it.hasNext(); ){
             Integer i = it.next();
             if (i%10 == 0) {
-                iList.add(addValue++);
+                it.add(addValue++);
             }
         }
 
